@@ -1,0 +1,42 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["Nombre", "Horario", "Usuario"],
+    "properties": {
+      "Nombre": { "bsonType": "string" },
+      "Horario": { "bsonType": "date" },
+      "Usuario": { "bsonType": "objectId" },
+      "Producto": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "Costo": { "bsonType": "int" },
+            "Tipo": { "bsonType": "string" }
+          }
+        }
+      },
+      "Sala": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "Tipo": { "bsonType": "string" },
+            "Capacidad": { "bsonType": "int" },
+            "Costo": { "bsonType": "int" },
+            "Reservacion": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "Fecha": { "bsonType": "date" },
+                  "Duracion": { "bsonType": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

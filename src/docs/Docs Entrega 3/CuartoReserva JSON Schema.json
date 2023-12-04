@@ -1,0 +1,29 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["FechaLlegada", "FechaSalida", "NumPersonas", "CheckIn", "CheckOut", "Cuenta", "Consumo", "Usuario", "Cuarto", "PlanConsumo"],
+    "properties": {
+      "FechaLlegada": { "bsonType": "date" },
+      "FechaSalida": { "bsonType": "date" },
+      "NumPersonas": { "bsonType": "int" },
+      "CheckIn": { "bsonType": "bool" },
+      "CheckOut": { "bsonType": "bool" },
+      "Cuenta": { "bsonType": "int" },
+      "Consumo": { "bsonType": "objectId" },
+      "Usuario": {
+        "bsonType": "array",
+        "items": { "bsonType": "objectId" }
+      },
+      "Cuarto": {
+        "bsonType": "array",
+        "items": { "bsonType": "objectId" }
+      },
+      "PlanConsumo": {
+        "bsonType": "object",
+        "properties": {
+          "Nombre": { "bsonType": "string" }
+        }
+      }
+    }
+  }
+}

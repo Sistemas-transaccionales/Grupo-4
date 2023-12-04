@@ -1,0 +1,72 @@
+{
+  "Servicio": {
+    "_id": "ObjectId",
+    "Nombre": "String",
+    "Horario": "Date",
+    "Usuario": {"type": "ObjectId", "ref": "Usuario"},
+    "Producto": [{
+      "_id": "ObjectId",
+      "Costo": "Integer",
+      "Tipo": "String"
+    }],
+    "Sala": [{
+      "_id": "ObjectId",
+      "Tipo": "String",
+      "Capacidad": "Integer",
+      "Costo": "Integer",
+      "Reservacion": [{
+        "_id": "ObjectId",
+        "Fecha": "Date",
+        "Duracion": "String"
+      }]
+    }]
+  },
+  "Consumo": {
+    "_id": "ObjectId",
+    "CuartoReserva": {"type": "ObjectId", "ref": "CuartoReserva"},
+    "Servicio": [{"type": "ObjectId", "ref": "Servicio"}],
+    "Costo": "Integer",
+    "Tipo": "String",
+    "Fecha": "Date"
+  },
+  "Usuario": {
+    "_id": "ObjectId",
+    "Contraseña": "String",
+    "Nombre": "String",
+    "Email": "String",
+    "TipoUsuario": {
+      "_id": "ObjectId",
+      "Nombre": "String"
+    }
+  },
+  "CuartoReserva": {
+    "_id": "ObjectId",
+    "FechaLlegada": "Date",
+    "FechaSalida": "Date",
+    "NumPersonas": "Integer",
+    "CheckIn": "Boolean",
+    "CheckOut": "Boolean",
+    "Cuenta": "Integer",
+    "Consumo": {"type": "ObjectId", "ref": "Consumo"},
+    "Usuario": [{"type": "ObjectId", "ref": "Usuario"}],
+    "Cuarto": [{"type": "ObjectId", "ref": "Cuarto"}],
+    "PlanConsumo": {
+      "_id": "ObjectId",
+      "Nombre": "String"
+    }
+  },
+  "Cuarto": {
+    "_id": "ObjectId",
+    "Disponibilidad": "Boolean",
+    "TipoHabitacion": {"type": "ObjectId", "ref": "TipoHabitacion"},
+    "ElementoHabitacion": {
+      "_id": "ObjectId",
+      "Nombre": "String",
+      "Costo": "Integer"
+    }
+  },
+  "TipoHabitacion": {
+    "_id": "ObjectId",
+    "Nombre": "String"
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "properties": {
+      "Servicio": {
+        "bsonType": "object",
+        "required": [
+          "Nombre",
+          "Horario",
+          "Usuario"
+        ],
+        "properties": {
+          "Nombre": {
+            "bsonType": "string"
+          },
+          "Horario": {
+            "bsonType": "date"
+          },
+          "Usuario": {
+            "bsonType": "objectId"
+          },
+          "Producto": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "properties": {
+                "Costo": {
+                  "bsonType": "int"
+                },
+                "Tipo": {
+                  "bsonType": "string"
+                }
+              }
+            }
+          },
+          "Sala": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "properties": {
+                "Tipo": {
+                  "bsonType": "string"
+                },
+                "Capacidad": {
+                  "bsonType": "int"
+                },
+                "Costo": {
+                  "bsonType": "int"
+                },
+                "Reservacion": {
+                  "bsonType": "array",
+                  "items": {
+                    "bsonType": "object",
+                    "properties": {
+                      "Fecha": {
+                        "bsonType": "date"
+                      },
+                      "Duracion": {
+                        "bsonType": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Consumo": {
+        "bsonType": "object",
+        "required": [
+          "CuartoReserva",
+          "Servicio",
+          "Costo",
+          "Tipo",
+          "Fecha"
+        ],
+        "properties": {
+          "CuartoReserva": {
+            "bsonType": "objectId"
+          },
+          "Servicio": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "objectId"
+            }
+          },
+          "Costo": {
+            "bsonType": "int"
+          },
+          "Tipo": {
+            "bsonType": "string"
+          },
+          "Fecha": {
+            "bsonType": "date"
+          }
+        }
+      },
+      "Usuario": {
+        "bsonType": "object",
+        "required": [
+          "Contraseña",
+          "Nombre",
+          "Email",
+          "TipoUsuario"
+        ],
+        "properties": {
+          "Contraseña": {
+            "bsonType": "string"
+          },
+          "Nombre": {
+            "bsonType": "string"
+          },
+          "Email": {
+            "bsonType": "string"
+          },
+          "TipoUsuario": {
+            "bsonType": "object",
+            "properties": {
+              "Nombre": {
+                "bsonType": "string"
+              }
+            }
+          }
+        }
+      },
+      "CuartoReserva": {
+        "bsonType": "object",
+        "required": [
+          "FechaLlegada",
+          "FechaSalida",
+          "NumPersonas",
+          "CheckIn",
+          "CheckOut",
+          "Cuenta",
+          "Consumo",
+          "Usuario",
+          "Cuarto",
+          "PlanConsumo"
+        ],
+        "properties": {
+          "FechaLlegada": {
+            "bsonType": "date"
+          },
+          "FechaSalida": {
+            "bsonType": "date"
+          },
+          "NumPersonas": {
+            "bsonType": "int"
+          },
+          "CheckIn": {
+            "bsonType": "bool"
+          },
+          "CheckOut": {
+            "bsonType": "bool"
+          },
+          "Cuenta": {
+            "bsonType": "int"
+          },
+          "Consumo": {
+            "bsonType": "objectId"
+          },
+          "Usuario": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "objectId"
+            }
+          },
+          "Cuarto": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "objectId"
+            }
+          },
+          "PlanConsumo": {
+            "bsonType": "object",
+            "properties": {
+              "Nombre": {
+                "bsonType": "string"
+              }
+            }
+          }
+        }
+      },
+      "Cuarto": {
+        "bsonType": "object",
+        "required": [
+          "Disponibilidad",
+          "TipoHabitacion",
+          "ElementoHabitacion"
+        ],
+        "properties": {
+          "Disponibilidad": {
+            "bsonType": "bool"
+          },
+          "TipoHabitacion": {
+            "bsonType": "objectId"
+          },
+          "ElementoHabitacion": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "properties": {
+                "Nombre": {
+                  "bsonType": "string"
+                },
+                "Costo": {
+                  "bsonType": "int"
+                }
+              }
+            }
+          }
+        }
+      },
+      "TipoHabitacion": {
+        "bsonType": "object",
+        "required": [
+          "Nombre"
+        ],
+        "properties": {
+          "Nombre": {
+            "bsonType": "string"
+          }
+        }
+      }
+    }
+  }
+}

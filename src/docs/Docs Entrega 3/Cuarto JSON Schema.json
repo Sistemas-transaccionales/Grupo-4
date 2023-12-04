@@ -1,0 +1,20 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["Disponibilidad", "TipoHabitacion", "ElementoHabitacion"],
+    "properties": {
+      "Disponibilidad": { "bsonType": "bool" },
+      "TipoHabitacion": { "bsonType": "objectId" },
+      "ElementoHabitacion": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "Nombre": { "bsonType": "string" },
+            "Costo": { "bsonType": "int" }
+          }
+        }
+      }
+    }
+  }
+}

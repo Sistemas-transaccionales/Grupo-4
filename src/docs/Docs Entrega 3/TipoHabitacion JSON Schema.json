@@ -1,0 +1,9 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["Nombre"],
+    "properties": {
+      "Nombre": { "bsonType": "string" }
+    }
+  }
+}

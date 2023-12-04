@@ -1,0 +1,16 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["CuartoReserva", "Servicio", "Costo", "Tipo", "Fecha"],
+    "properties": {
+      "CuartoReserva": { "bsonType": "objectId" },
+      "Servicio": {
+        "bsonType": "array",
+        "items": { "bsonType": "objectId" }
+      },
+      "Costo": { "bsonType": "int" },
+      "Tipo": { "bsonType": "string" },
+      "Fecha": { "bsonType": "date" }
+    }
+  }
+}
