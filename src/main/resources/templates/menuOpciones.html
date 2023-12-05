@@ -53,38 +53,38 @@
     <div class="menu">
         <h1>Menú de Opciones</h1>
         <ul>
-            <li th:if="${permisos.contains('A')}">
-                <a th:href="@{/RF1}">CRUD Tipos de Habitaciones</a>
+            <li th:if="${permisos.contains('D')}">
+                <a th:href="@{/RF1(id=${usuario.id}}">CRUD Tipos de Habitaciones</a>
             </li>
-            <li th:if="${permisos.contains('B')}">
-                <a th:href="@{/RF2}">CRUD Habitaciones</a>
+            <li th:if="${permisos.contains('D')}">
+                <a th:href="@{/RF2(id=${usuario.id}}">CRUD Habitaciones</a>
             </li>
-            <li th:if="${permisos.contains('C')}">
-                <a th:href="@{/RF3}">CRUD Servicios</a>
+            <li th:if="${permisos.contains('D')}">
+                <a th:href="@{/RF3(id=${usuario.id}}">CRUD Servicios</a>
             </li>
             <li th:if="${permisos.contains('D')}">
                 <a th:href="@{/RF4(id=${usuario.id})}">CRUD Reservas de Alojamiento</a>
             </li>
-            <li th:if="${permisos.contains('E')}">
-                <a th:href="@{/RF5}">CRUD Check-In</a>
+            <li th:if="${permisos.contains('D')}">
+                <a th:href="@{/RF5(id=${usuario.id}}">CRUD Check-In</a>
             </li>
-            <li th:if="${permisos.contains('F')}">
-                <a th:href="@{/RF6}">CRUD Consumo</a>
+            <li th:if="${permisos.contains('D')}">
+                <a th:href="@{/RF6(id=${usuario.id}}">CRUD Consumo</a>
             </li>
-            <li th:if="${permisos.contains('G')}">
-                <a th:href="@{/RF7}">CRUD Check-Out</a>
+            <li th:if="${permisos.contains('D')}">
+                <a th:href="@{/RF7(id=${usuario.id}}">CRUD Check-Out</a>
             </li>
-            <li th:if="${permisos.contains('H')}">
-                <a th:href="@{/RFC1}">RFC1 - Dinero Recolectado</a>
+            <li th:if="${permisos.contains('D')}">
+                <a th:href="@{/RFC1(id=${usuario.id}}">RFC1 - Dinero Recolectado</a>
             </li>
-            <li th:if="${permisos.contains('I')}">
-                <a th:href="@{/RFC2}">RFC2 - Índice de Ocupación</a>
+            <li th:if="${permisos.contains('D')}">
+                <a th:href="@{/RFC2(id=${usuario.id}}">RFC2 - Índice de Ocupación</a>
             </li>
-            <li th:if="${permisos.contains('J')}">
-                <a th:href="@{/RFC3}">RFC3 - Consumo de un Cliente</a>
+            <li th:if="${permisos.contains('D')}">
+                <a th:href="@{/RFC3(id=${usuario.id}}">RFC3 - Consumo de un Cliente</a>
             </li>
-            <li th:if="${permisos.contains('K')}">
-                <a th:href="@{/RFC4}">RFC4 - Consultar Consumo</a>
+            <li th:if="${permisos.contains('D')}">
+                <a th:href="@{/RFC4(id=${usuario.id}}">RFC4 - Consultar Consumo</a>
             </li>
             
 

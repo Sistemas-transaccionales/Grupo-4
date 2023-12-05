@@ -34,7 +34,7 @@ public class UsuarioController {
         else{
             model.addAttribute("usuario", usuario);
             model.addAttribute("permisos", usuario.getTipoUsuario().getPermisos());
-            return "/menuOpciones.html";
+            return "/menuOpciones";
         }
     }
 
